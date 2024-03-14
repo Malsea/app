@@ -13,17 +13,15 @@ def listTasks():
         for index, task in enumerate(tasks):
             # Can go through the list to access each task 
             print(f"Task #{index}. {task}")
-        
-
 
 def deleteTask(): 
     listTasks()
     # Incase the code doesn't work
     try: 
         taskToDelete = int(input("Choose the number you want to delete"))
-        if taskToDelete >= 0 and taskeToDelete < len(tasks):
-            tasks.pop(taskToDelete)
-            print(f"task {taskToDelete} has been deleted")
+        if taskToDelete >= 0 and taskToDelete < len(tasks):
+            deleted_task = tasks.pop(taskToDelete)
+            print(f"task {deleted_task} has been deleted")
         else:
             print(f"Task #{taskToDelete} was not found")
     except:
@@ -63,4 +61,6 @@ while True:
         #So that the user knows that their input is invalid and to do it again
 
 print("Goodbye")
+
+
 
